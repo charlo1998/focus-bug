@@ -7,7 +7,7 @@ The key idea:
 ➡️ Feed this minimal set to a classical navigation pipeline
 ➡️ Achieve robust, real-time navigation even in cluttered and dynamic environments.
 
-Focus Bug is the first method to match the 97% success rate of robust classical navigation — while reducing computation by up to 2.6×.
+Focus Bug matches the high success rate and robustness of classical navigation while reducing computation tine by a factor of 2.6 on average.
 
 This repository contains the implementation of Focus Bug from our IROS 2025 paper:
 📄 Focus Bug: Learning Environmental Awareness for Efficient Mapless Navigation
