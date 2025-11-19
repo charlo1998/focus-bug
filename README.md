@@ -1,10 +1,20 @@
-# Air Learning Reinforcement Learning
+# Focus Bug: Learning Environmental Awareness for Efficient Mapless Navigation
 
-In this page we give step by step instruction to install airlearning reinforcement learning package and get it up and running. If you have read the paper, then this page will give instruction on setting up the portion highlighted in red in the Air Learning Infrastructure:
+Focus Bug is a lightweight and efficient mapless navigation framework designed for tiny robots (nano drones, micro rovers) operating under severe size, weight, and power (SWaP) constraints.
 
-![](https://github.com/harvard-edge/airlearning-rl/blob/master/docs/images/airlearning-rl.png)
+The key idea:
+➡️ Learn to process only the critical sensory information
+➡️ Feed this minimal set to a classical navigation pipeline
+➡️ Achieve robust, real-time navigation even in cluttered and dynamic environments.
+
+Focus Bug is the first method to match the 97% success rate of robust classical navigation — while reducing computation by up to 2.6×.
+
+This repository contains the implementation of Focus Bug from our IROS 2025 paper:
+📄 Focus Bug: Learning Environmental Awareness for Efficient Mapless Navigation
+
 
 ## System requirements:
+This project uses the AirLearning RL environment : [link](https://github.com/harvard-edge/airlearning-rl/tree/dcd8a39f77992873f49b6872aa534a64a2bfa23a)
 The following instructions were tested on Windows 10, Ubuntu 16.04 WSL (Windows 10)
 
 * Windows 10
@@ -60,4 +70,37 @@ $ python collect_data.py
 
 This should start the AirLearning game mode and start the training
 
+# 🚀 Key Features
+
+DRL agent that learns to select only the relevant LiDAR sectors
+
+Hybrid navigation stack integrating:
+
+Tangent Bug (global planner)
+
+Dynamic Window Approach (DWA)
+
+Classical potential fields (for comparison)
+
+Vector-Field Histogram inspired representation to massively reduce observation & action spaces
+
+Simulation in AirSim via AirLearning
+
+Real robot deployment on the Agilex Limo rover using CPU-only compute
+
+Generalizes across embodiments (drone → rover)
+
+87% less LiDAR data used on average
+
+2.6× faster processing
+
+57% fewer collisions than end-to-end RL baselines
+
+# Citation
+if you use this code in your research, please citeL
+(citation pending, IROS 2025 proceedings to be published).
+
+# License
+
+This project is released under the MIT License.
 
